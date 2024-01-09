@@ -1,6 +1,5 @@
-# automated
- A Python code to automate commit. This has two functions:
-
- - To be an example of how to automate commit.
- - To be a show off...
-
+IyBhdXRvbWF0ZWQKIEEgUHl0aG9uIGNvZGUgdG8gYXV0b21hdGUgY29tbWl0
+LiBUaGlzIGhhcyB0d28gZnVuY3Rpb25zOgoKIC0gVG8gYmUgYW4gZXhhbXBs
+ZSBvZiBob3cgdG8gYXV0b21hdGUgY29tbWl0LgogLSBUbyBiZSBhIHNob3cg
+b2ZmLi4uCgo=
+.
