@@ -14,7 +14,7 @@ def add_dot_to_readme():
     repo_owner = os.getenv("GITHUB_USERNAME")
     repo_name = os.getenv("REPO_NAME")
 
-    readme_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/contents/README.md"
+    readme_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/contents/updated_file.txt"
     github_token = os.getenv("GITHUB_TOKEN")
     headers = {
         "Authorization": f"Bearer {github_token}",
@@ -31,7 +31,7 @@ def add_dot_to_readme():
 
         # Step 2: Push the change to the GitHub repo
         commit_message = f"Automated commit - {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}"
-        update_readme_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/contents/README.md"
+        update_readme_url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/contents/updated_file.txt"
         update_readme_payload = {
             "message": commit_message,
             "content": updated_content_base64,
@@ -48,7 +48,7 @@ def add_dot_to_readme():
         print(f"Failed to fetch README content. Status Code: {response.status_code}, Response: {response.text}")
 
 # Step 3: Schedule the task to run every day at a specific time
-schedule.every().day.at("01:05").do(add_dot_to_readme)  # Adjust the time as needed
+schedule.every().day.at("01:11").do(add_dot_to_readme)  # Adjust the time as needed
 
 while True:
     schedule.run_pending()
