@@ -48,7 +48,7 @@ def add_dot_to_readme():
         print(f"Failed to fetch README content. Status Code: {response.status_code}, Response: {response.text}")
 
 # Step 3: Schedule the task to run every day at a specific time
-schedule.every().day.at("11:12").do(add_dot_to_readme)  # Adjust the time as needed
+schedule.every().day.at("18:36").do(add_dot_to_readme)  # Adjust the time as needed
 
 while True:
     schedule.run_pending()
